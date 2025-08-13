@@ -1,0 +1,219 @@
+:root {
+  --primary: #D29DF2;
+  --primary-light: #f5ecfd;
+  --ink: #1b1025;
+  --muted: #6c5a7c;
+  --card: #ffffff;
+  --bg: #faf7ff;
+  --shadow: 0 8px 20px rgba(27,16,37,.08);
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.top-nav {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 12px;
+  flex-wrap: wrap;
+}
+.top-nav a {
+  text-decoration: none;
+  background: var(--primary-light);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  transition: background 0.2s ease;
+}
+.top-nav a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* HERO */
+.hero {
+  padding: 30px 20px;
+}
+.hero-inner {
+  background: linear-gradient(135deg, var(--primary-light), white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.hero-inner h2 {
+  margin: 0 0 10px;
+}
+.hero-inner p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.btn:hover {
+  filter: brightness(1.05);
+}
+.btn.ghost {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  color: var(--ink);
+}
+
+/* SECTION */
+.section {
+  padding: 20px;
+}
+.section-title {
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.card-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--ink);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.muted {
+  color: var(--muted);
+}
+.details {
+  padding-left: 18px;
+  margin: 8px 0 14px;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* PÊCHE TABLE */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.filters label {
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+select {
+  border: none;
+  background: transparent;
+  font: inherit;
+}
+.table {
+  display: grid;
+  gap: 10px;
+}
+.row {
+  background: white;
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+.row-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.pill {
+  background: var(--primary-light);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.progress {
+  height: 10px;
+  background: var(--primary-light);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar {
+  background: var(--primary);
+  height: 100%;
+}
+
+/* CALLOUT */
+.callout {
+  background: var(--primary-light);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-top: 14px;
+}
+
+/* GRID INFO */
+.grid {
+  display: grid;
+  gap: 14px;
+}
+.cols-2 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  font: inherit;
+  text-align: right;
+}
